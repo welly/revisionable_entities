@@ -1,0 +1,25 @@
+# Revisionable routing definition
+revisionable.settings_tab:
+  route_name: revisionable.settings
+  title: 'Settings'
+  base_route: revisionable.settings
+entity.revisionable.canonical:
+  route_name: entity.revisionable.canonical
+  base_route: entity.revisionable.canonical
+  title: 'View'
+
+entity.revisionable.edit_form:
+  route_name: entity.revisionable.edit_form
+  base_route: entity.revisionable.canonical
+  title: Edit
+
+entity.revisionable.delete_form:
+  route_name: entity.revisionable.delete_form
+  base_route: entity.revisionable.canonical
+  title: Delete
+  weight: 10
+
+entity.revisionable.version_history:
+  route_name: entity.revisionable.version_history
+  base_route: entity.revisionable.canonical
+  title: 'Revisions'

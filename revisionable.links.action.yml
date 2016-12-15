@@ -1,0 +1,5 @@
+entity.revisionable.add_form:
+  route_name: entity.revisionable.add_form
+  title: 'Add Revisionable'
+  appears_on:
+    - entity.revisionable.collection

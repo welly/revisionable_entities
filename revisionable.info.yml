@@ -1,0 +1,5 @@
+name: Revisionable
+type: module
+description: Provides a revisionable entity
+core: 8.x
+package: LGT

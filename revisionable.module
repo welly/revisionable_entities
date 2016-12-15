@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Contains main module functions.
+ */
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function revisionable_views_data_alter(array &$data) {
+
+  $fields = [
+    'topic' => [
+      'title' => t('Topic'),
+      'label' => t('Topic'),
+      'help' => t('Topic chosen from autocomplete or select widget.'),
+    ],
+    'type' => [
+      'title' => t('Revisionable Type'),
+      'label' => t('Topic'),
+      'help' => t('Revisionable Type chosen from autocomplete or select widget.'),
+    ],
+    'legislation' => [
+      'title' => t('Legislation'),
+      'label' => t('Legislation'),
+      'help' => t('Legislation chosen from autocomplete or select widget.'),
+    ],
+    'purpose' => [
+      'title' => t('Purpose'),
+      'label' => t('Purpose'),
+      'help' => t('Purpose chosen from autocomplete or select widget.'),
+    ],
+  ];
+
+  $a = 1;
+
+  foreach ($fields as $key => $field) {
+    $data['search_api_index_revisionable'][$key] = [
+      'title' => $field['title'],
+      'help' => $field['help'],
+      'filter' => [
+        'field' => $key,
+        'id' => 'revisionable_term_filter',
+        'label' => $field['label'],
+      ],
+    ];
+  }
+  $a = 1;
+  $data['search_api_index_revisionable']['council'] = [
+    'title' => t('council'),
+    'help' => t('Council chosen from autocomplete or select widget.'),
+    'filter' => [
+      'field' => 'council',
+      'id' => 'revisionable_council_filter',
+      'label' => t('council'),
+    ],
+  ];
+
+}

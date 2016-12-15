@@ -1,0 +1,7 @@
+# Revisionable menu items definition
+entity.revisionable.collection:
+  title: 'Revisionables'
+  route_name: entity.revisionable.collection
+  description: 'List Revisionables'
+  parent: system.admin_content
+  weight: 100

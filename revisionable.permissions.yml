@@ -1,0 +1,17 @@
+add revisionable entities:
+  title: 'Create new Revisionable entities'
+
+access revisionable entities overview:
+  title: 'Access the Council override overview page'
+
+delete revisionable entities:
+  title: 'Delete Revisionable entities'
+
+edit revisionable entities:
+  title: 'Edit Revisionable entities'
+
+view published revisionable entities:
+  title: 'View published Revisionable entities'
+
+view unpublished revisionable entities:
+  title: 'View unpublished Revisionable entities'
