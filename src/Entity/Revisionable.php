@@ -353,62 +353,15 @@ class Revisionable extends RevisionableContentEntityBase implements Revisionable
         'weight' => -2,
       ));
 
-    $fields['revisionable_type'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Revisionable type'))
-      ->setRevisionable(TRUE)
-      ->setSetting('target_type', 'taxonomy_term')
-      ->setSetting('handler_settings',
-        ['target_bundles' => ['taxonomy_term' => 'revisionable_type']])
-      ->setDisplayOptions('view', array(
-        'label' => 'above',
-        'type' => 'taxonomy_term',
-        'weight' => 0,
-      ))
-      ->setDisplayOptions('form', array(
-        'type' => 'options_select',
-        'weight' => 0,
-      ));
 
-    $fields['legislation'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Legislation'))
+    $fields['region'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Region'))
       ->setRevisionable(TRUE)
-      ->setSetting('target_type', 'taxonomy_term')
-      ->setSetting('handler_settings',
-        ['target_bundles' => ['taxonomy_term' => 'legislation']])
-      ->setDisplayOptions('view', array(
-        'label' => 'above',
-        'type' => 'taxonomy_term',
-        'weight' => 2,
-      ))
-      ->setDisplayOptions('form', array(
-        'type' => 'options_select',
-        'weight' => 2,
-      ));
-
-    $fields['purpose'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Purpose'))
-      ->setRevisionable(TRUE)
-      ->setSetting('target_type', 'taxonomy_term')
-      ->setSetting('handler_settings',
-        ['target_bundles' => ['taxonomy_term' => 'purpose']])
-      ->setDisplayOptions('view', array(
-        'label' => 'above',
-        'type' => 'taxonomy_term',
-        'weight' => 4,
-      ))
-      ->setDisplayOptions('form', array(
-        'type' => 'options_select',
-        'weight' => 4,
-      ));
-
-    $fields['council'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Council'))
-      ->setRevisionable(TRUE)
-      ->setSetting('target_type', 'council')
+      ->setSetting('target_type', 'region')
       ->setSetting('handler', 'default')
       ->setDisplayOptions('view', array(
         'label' => 'above',
-        'type' => 'council',
+        'type' => 'region',
         'weight' => 6,
       ))
       ->setDisplayOptions('form', array(
